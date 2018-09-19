@@ -28,17 +28,19 @@ public class ShopDAOImpl implements ShopDAO {
     }
 
     @Override
+    public void updateShop(Shop shop) {
+    getSession().saveOrUpdate(shop);
+    }
+
+
+
+/*    @Override
     public Shop getShopById(int id) {
         return (Shop) getSession().createCriteria(Shop.class).list();
     }
 
-/*    @Override
-    public void deleteShop(Shop shop) {
-
-    }
-
     @Override
-    public void updateShop(Shop shop) {
+    public void deleteShop(Shop shop) {
 
     }
 

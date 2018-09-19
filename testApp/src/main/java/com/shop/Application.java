@@ -1,13 +1,15 @@
 package com.shop;
 
 import com.shop.config.ApplicationConfig;
-import com.shop.config.HibernateConfig;
 
+import com.shop.models.Buyer;
 import com.shop.models.Shop;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
 import com.shop.services.impl.ShopServiceImpl;
+
+import java.util.List;
 
 
 @Component
@@ -29,12 +31,9 @@ public class Application {
 
         Shop shop = new Shop("OBI");
         shopServiceImpl.saveShop(shop);
-/*        Buyer fred = new Buyer("Fred", 31);
-        fred.setShop(shop);
-        shop.addBuyer(fred);
-        Buyer anna = new Buyer("Anna", 54);
-        anna.setShop(shop);
-        shop.addBuyer(anna);
-        shopServiceImpl.update(shop);*/
+        Buyer buyer1 = new Buyer("Marina", 29);
+        buyer1.setShop(shop);
+        shop.addBuyer(buyer1);
+        shopServiceImpl.update(shop);
     }
 }

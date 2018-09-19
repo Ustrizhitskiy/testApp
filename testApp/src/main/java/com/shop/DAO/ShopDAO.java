@@ -9,11 +9,13 @@ public interface ShopDAO {
 
     void saveShop(Shop shop);
 
-    Shop getShopById(int id);
-
-/*    void deleteShop(Shop shop);
-
     void updateShop(Shop shop);
+
+
+
+/*    Shop getShopById(int id);
+
+    void deleteShop(Shop shop);
 
     List<Shop> findAll();
 

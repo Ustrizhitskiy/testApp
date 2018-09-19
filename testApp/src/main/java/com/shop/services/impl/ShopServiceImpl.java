@@ -1,6 +1,6 @@
 package com.shop.services.impl;
 
-import com.shop.DAO.BuyerDAO;
+/*import com.shop.DAO.BuyerDAO;*/
 import com.shop.DAO.ShopDAO;
 import com.shop.models.Buyer;
 import com.shop.models.Shop;
@@ -16,8 +16,8 @@ public class ShopServiceImpl implements ShopService {
     @Autowired
     ShopDAO shopDAO;
 
-    @Autowired
-    BuyerDAO buyerDAO;
+/*    @Autowired
+    BuyerDAO buyerDAO;*/
 
         @Override
         public void saveShop(Shop shop) {
@@ -29,7 +29,7 @@ public class ShopServiceImpl implements ShopService {
         }
 
         @Override
-        public void update(Shop shop) {
+        public void update(Shop shop) { shopDAO.updateShop(shop);
         }
 
         @Override

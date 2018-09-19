@@ -26,6 +26,15 @@ public class Buyer {
         this.age = age;
     }
 
+    public Shop getShop() {
+        return shop;
+    }
+
+    public void setShop(Shop shop) {
+        this.shop = shop;
+    }
+
+
     public int getId() {
         return id;
     }
@@ -44,14 +53,6 @@ public class Buyer {
 
     public void setAge(int age) {
         this.age = age;
-    }
-
-    public Shop getShop() {
-        return shop;
-    }
-
-    public void setShop(Shop shop) {
-        this.shop = shop;
     }
 
     @Override
