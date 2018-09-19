@@ -29,11 +29,16 @@ public class Application {
 
     private void run() {
 
-        Shop shop = new Shop("OBI");
+/*        Shop shop = new Shop("OBI");
         shopServiceImpl.saveShop(shop);
         Buyer buyer1 = new Buyer("Marina", 29);
         buyer1.setShop(shop);
         shop.addBuyer(buyer1);
-        shopServiceImpl.update(shop);
+        shopServiceImpl.update(shop);*/
+
+        Shop shop = shopServiceImpl.getShop(10);
+        System.out.println(shop);
+        List<Buyer> listById = shopServiceImpl.getAllBuyersByShopId(10);
+        System.out.println(listById);
     }
 }

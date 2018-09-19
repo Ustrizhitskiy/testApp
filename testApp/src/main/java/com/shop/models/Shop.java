@@ -65,10 +65,6 @@ public class Shop {
         buyers.add(buyer);
     }
 
-    public void removeBuyer(Buyer buyer) {
-        buyers.remove(buyer);
-    }
-
     public int getId() {
         return id;
     }
@@ -89,8 +85,12 @@ public class Shop {
         this.buyers = buyers;
     }
 
+    public void removeBuyer(Buyer buyer) {
+        buyers.remove(buyer);
+    }
+
     @Override
     public String toString() {
-        return id + " ," + name;
+        return id + ", " + name;
     }
 }

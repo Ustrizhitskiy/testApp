@@ -1,6 +1,6 @@
 package com.shop.services.impl;
 
-/*import com.shop.DAO.BuyerDAO;*/
+import com.shop.DAO.BuyerDAO;
 import com.shop.DAO.ShopDAO;
 import com.shop.models.Buyer;
 import com.shop.models.Shop;
@@ -16,8 +16,8 @@ public class ShopServiceImpl implements ShopService {
     @Autowired
     ShopDAO shopDAO;
 
-/*    @Autowired
-    BuyerDAO buyerDAO;*/
+    @Autowired
+    BuyerDAO buyerDAO;
 
         @Override
         public void saveShop(Shop shop) {
@@ -25,11 +25,25 @@ public class ShopServiceImpl implements ShopService {
         }
 
         @Override
-        public void delete(Shop shop) {
+        public void update(Shop shop) {
+            shopDAO.updateShop(shop);
         }
 
         @Override
-        public void update(Shop shop) { shopDAO.updateShop(shop);
+        public Shop getShop(int id) {
+            return (Shop) shopDAO.getShopById(id);
+        }
+
+    @Override
+    public List<Buyer> getAllBuyersByShopId(int id) {
+        Shop shop = getShop(id);
+        return buyerDAO.getAllBuyersByShopId(shop);
+    }
+
+
+/*
+        @Override
+        public void delete(Shop shop) {
         }
 
         @Override
@@ -40,10 +54,5 @@ public class ShopServiceImpl implements ShopService {
         @Override
         public Buyer findBuyerById(int id) {
             return null;
-        }
-
-        @Override
-        public Shop getShopById(int id) {
-            return null;
-        }
+        }*/
 }

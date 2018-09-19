@@ -9,5 +9,5 @@ public interface BuyerDAO {
 
     void saveBuyer(Buyer buyer);
 
-    List getAllBuyersByShop(Shop shop);
+    List<Buyer> getAllBuyersByShopId(Shop shop);
 }

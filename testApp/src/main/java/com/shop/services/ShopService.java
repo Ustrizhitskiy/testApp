@@ -9,13 +9,15 @@ public interface ShopService {
 
     void saveShop(Shop shop);
 
-    public Shop getShopById(int id);
-
-    void delete(Shop shop);
-
     void update(Shop shop);
+
+    Shop getShop(int id);
+
+    List<Buyer> getAllBuyersByShopId(int id);
+
+/*    void delete(Shop shop);
 
     public List<Shop> findAll();
 
-    public Buyer findBuyerById(int id);
+    public Buyer findBuyerById(int id);*/
 }

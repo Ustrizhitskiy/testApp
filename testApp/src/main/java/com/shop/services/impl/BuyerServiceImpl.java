@@ -17,7 +17,7 @@ public class BuyerServiceImpl implements BuyerService {
 
     @Override
     public void saveBuyer(Buyer buyer, int id) {
-        Shop shopById = shopService.getShopById(id);
+        Shop shopById = shopService.getShop(id);
         buyer.setShop(shopById);
         buyerDAO.saveBuyer(buyer);
     }

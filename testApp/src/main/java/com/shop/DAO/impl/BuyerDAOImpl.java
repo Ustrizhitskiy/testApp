@@ -28,9 +28,8 @@ public class BuyerDAOImpl implements BuyerDAO {
         getSession().saveOrUpdate(buyer);
     }
 
-    @SuppressWarnings("unchecked")
     @Override
-    public List<Buyer> getAllBuyersByShop(Shop shop) {
+    public List<Buyer> getAllBuyersByShopId(Shop shop) {
         Criteria criteria = getSession().createCriteria(Buyer.class);
         criteria.add(Restrictions.eq("shop", shop));
         return criteria.list();

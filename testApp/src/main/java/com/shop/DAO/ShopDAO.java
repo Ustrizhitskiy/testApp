@@ -11,11 +11,11 @@ public interface ShopDAO {
 
     void updateShop(Shop shop);
 
+    Shop getShopById(int id);
 
 
-/*    Shop getShopById(int id);
 
-    void deleteShop(Shop shop);
+/*    void deleteShop(Shop shop);
 
     List<Shop> findAll();
 
